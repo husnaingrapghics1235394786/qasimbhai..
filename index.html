@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kontent Squad — AI-Powered Creator Community</title>
+<meta name="description" content="Master AI Thumbnail Design, Video Editing, Photoshop, After Effects & Content Creation. Join Kontent Squad — an AI-powered creator community by Qasim Zia." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,600&family=Archivo+Expanded:wght@600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<!-- Condensed display face -->
+<link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============ BACKGROUND FX (persistent across pages) ============ -->
+<div class="fx" aria-hidden="true">
+  <div class="fx__grid"></div>
+  <div class="fx__noise"></div>
+  <div class="orb orb--a" data-depth="0.05"></div>
+  <div class="orb orb--b" data-depth="0.09"></div>
+  <div class="orb orb--c" data-depth="0.14"></div>
+  <div class="orb orb--d" data-depth="0.07"></div>
+</div>
+
+<!-- ============ PRELOADER ============ -->
+<div class="preloader" id="preloader">
+  <div class="preloader__inner">
+    <div class="preloader__mark">
+      <span class="preloader__spark">✦</span>
+      <span class="preloader__brand">KONTENT<em>SQUAD</em></span>
+    </div>
+    <div class="preloader__bar"><span class="preloader__fill" id="plFill"></span></div>
+    <div class="preloader__row">
+      <span class="preloader__tag">AI-POWERED CREATOR COMMUNITY</span>
+      <span class="preloader__count" id="plCount">00</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============ PAGE TRANSITION OVERLAY ============ -->
+<div class="pt" id="pt" aria-hidden="true">
+  <span class="pt__panel"></span><span class="pt__panel"></span><span class="pt__panel"></span><span class="pt__panel"></span><span class="pt__panel"></span>
+</div>
+<div class="pt__label" id="ptLabel"><span class="spark">✦</span><span id="ptLabelText">Home</span></div>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <a class="nav__logo" href="#home" data-link="home">
+    <span class="nav__spark">✦</span>KONTENT<em>SQUAD</em>
+  </a>
+
+  <nav class="nav__links" id="navLinks">
+    <a href="#home"       data-link="home"       class="nav__link is-active">Home</a>
+    <a href="#masterclass" data-link="masterclass" class="nav__link">Masterclass</a>
+    <a href="#community"   data-link="community"   class="nav__link">Community</a>
+    <a href="#live"        data-link="live"        class="nav__link">Live Sessions</a>
+    <a href="#contact"     data-link="contact"     class="nav__link">Contact</a>
+  </nav>
+
+  <div class="nav__right">
+    <a href="#masterclass" data-link="masterclass" class="btn btn--enroll">
+      <span class="btn__spark">✦</span> Enroll — $20
+    </a>
+    <button class="nav__burger" id="navBurger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ SPA STAGE ============ -->
+<main class="stage" id="stage">
+
+  <!-- ==================== HOME ==================== -->
+  <section class="page" data-page="home">
+
+    <!-- HERO -->
+    <div class="hero">
+      <div class="hero__badges">
+        <span class="chip" data-reveal>👤 Qasim Zia — Founder</span>
+        <span class="chip" data-reveal>🤖 AI-Powered Learning</span>
+        <span class="chip" data-reveal>🎨 8+ Masterclasses</span>
+        <span class="chip chip--live" data-reveal><i class="ping"></i> Community Live</span>
+      </div>
+
+      <p class="hero__eyebrow" data-reveal>AI-Powered Creator Community</p>
+      <h1 class="hero__title">
+        <span class="line" data-reveal>LEARN</span>
+        <span class="line" data-reveal>CONTENT</span>
+        <span class="line line--accent" data-reveal>WITH AI</span>
+      </h1>
+      <p class="hero__lead" data-reveal>
+        Stop spending hours watching random tutorials. Join Kontent Squad and master
+        AI Thumbnail Designing, Video Editing, Photoshop, After Effects, AI Tools, and
+        Content Creation — all in one place.
+      </p>
+
+      <div class="hero__cta" data-reveal>
+        <a href="#masterclass" data-link="masterclass" class="btn btn--solid">
+          <span class="btn__spark">✦</span> Start Masterclass — $20
+        </a>
+        <a href="#community" data-link="community" class="btn btn--ghost">Join Community →</a>
+      </div>
+
+  
+
+      <div class="hero__scroll" data-reveal><span>SCROLL</span><i></i></div>
+    </div>
+
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track" id="marqueeTrack">
+        <!-- filled by JS -->
+      </div>
+    </div>
+
+    <!-- FLAGSHIP -->
+    <div class="section flagship">
+      <div class="glass flagship__card" data-reveal>
+        <div class="flagship__left">
+          <span class="pill pill--hot">🚀 Flagship Masterclass</span>
+          <h2 class="h2">AI Thumbnail Designing <em>Masterclass</em></h2>
+          <p class="muted">
+            Learn to create professional click-worthy thumbnails with AI in just 1 hour.
+            Use the latest AI tools to design thumbnails that look like they were made by
+            professional designers — without spending years mastering Photoshop.
+          </p>
+          <div class="flagship__price">
+            <span class="tiny">ONE-TIME ACCESS</span>
+            <div class="price"><span>$</span>20</div>
+            <p class="muted small">
+              Purchase any Masterclass and unlock every current and future Masterclass
+              inside Kontent Squad. No hidden fees. No additional purchases.
+            </p>
+          </div>
+        </div>
+
+        <div class="flagship__right">
+          <span class="tiny">✅ Everything Included</span>
+          <ul class="check">
+            <li>AI Thumbnail Designing Masterclass</li>
+            <li>Photoshop Masterclass</li>
+            <li>Professional Video Editing Masterclass</li>
+            <li>After Effects Motion Graphics Masterclass</li>
+            <li>AI Tools for Content Creation</li>
+            <li>AI Ads &amp; Creative Workflow</li>
+            <li>All Future Masterclasses</li>
+            <li>✦ Lifetime Kontent Squad Community Access</li>
+          </ul>
+          <a href="#masterclass" data-link="masterclass" class="btn btn--solid btn--full">
+            <span class="btn__spark">✦</span> Enroll Now — $20 One-Time
+          </a>
+          <p class="fineprint">Lifetime access · All future content included · No subscription</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- WHAT YOU'LL MASTER -->
+    <div class="section">
+      <div class="section__head" data-reveal>
+        <span class="eyebrow">01 — Curriculum</span>
+        <h2 class="h2 center">What You'll <em>Master</em></h2>
+        <p class="muted center narrow">
+          Whether you're just getting started or already creating content, we'll help you
+          build the skills that modern creators use to grow on YouTube and social media.
+        </p>
+      </div>
+
+      <div class="grid grid--3" id="masterGrid">
+        <!-- filled by JS -->
+      </div>
+    </div>
+
+    <!-- FINAL CTA -->
+    <div class="section">
+      <div class="glass finalcta" data-reveal>
+        <span class="pill">🚀 Start Building Your Creator Career Today</span>
+        <h2 class="h2 center">Everything You Need to Become <em>a Professional Content Creator</em></h2>
+        <p class="muted center narrow">
+          Learn in-demand skills, join an ambitious creator community, receive expert
+          feedback, and build meaningful industry connections. All powered by AI.
+        </p>
+        <div class="finalcta__cards">
+          <div class="glass mini">
+            <span class="tiny">One-Time Access</span>
+            <div class="price"><span>$</span>20</div>
+            <p class="muted small">All Masterclasses + Community + Future Content</p>
+            <a href="#masterclass" data-link="masterclass" class="btn btn--solid btn--full"><span class="btn__spark">✦</span> Enroll in Masterclass</a>
+          </div>
+          <div class="finalcta__plus">+<small>optionally add</small></div>
+          <div class="glass mini">
+            <span class="tiny">Monthly Membership</span>
+            <div class="price"><span>$</span>10<small>/mo</small></div>
+            <p class="muted small">4 Live Sessions · Weekly Expert Feedback</p>
+            <a href="#live" data-link="live" class="btn btn--ghost btn--full">Join Live Sessions →</a>
+          </div>
+        </div>
+        <p class="fineprint">Based in Faisalabad, Pakistan · Working Globally · KontentSquadx@gmail.com</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== MASTERCLASS ==================== -->
+  <section class="page" data-page="masterclass" hidden>
+    <div class="pagehero">
+      <span class="eyebrow" data-reveal>02 — Masterclasses</span>
+      <h1 class="pagehero__title" data-reveal>ONE PASS. <em>EVERY CLASS.</em></h1>
+      <p class="muted narrow" data-reveal>
+        Purchase any Masterclass and unlock every current and future Masterclass inside
+        Kontent Squad. No hidden fees. No additional purchases. One $20 payment, lifetime access.
+      </p>
+    </div>
+
+    <!-- ORBIT GALLERY -->
+    <div class="section">
+      <div class="section__head" data-reveal>
+        <span class="eyebrow">Live Preview</span>
+        <h2 class="h2 center">Thumbnails Made <em>With AI</em></h2>
+      </div>
+      <div class="orbit-wrap glass" id="orbitWrap">
+        <div class="orbit-label"><span class="dot"></span>ORBIT.01 — FLOATING ARRAY</div>
+        <div class="orbit-hint">CLICK A FRAME TO EXPAND</div>
+        <div class="orbit-counter" id="orbitCounter">00 / 08</div>
+        <div class="orbit-stagewrap" id="orbitStageWrap">
+          <div class="orbit-stage" id="orbitStage">
+            <div class="orbit-core" id="orbitCore"><img src="OIP.webp" alt="Kontent Squad"></div>
+            <div class="orbit-ring" id="orbitRing"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PRICING DECK -->
+    <div class="section" id="pricing">
+      <div class="pricing__pin" id="pricingPin">
+        <div class="section__head" data-reveal>
+          <span class="eyebrow">Pricing</span>
+          <h2 class="h2 center">Choose Your <em>Access</em></h2>
+          <p class="muted center narrow">One pass unlocks everything. Add live mentoring any time.</p>
+        </div>
+
+        <div class="deck" id="deck">
+          <!-- LEFT -->
+          <article class="pcard pcard--left" data-card="left">
+            <div class="pcard__inner glass">
+              <div class="pcard__top">
+                <span class="pcard__code">PASS / 01</span>
+                <h3 class="pcard__name">Community</h3>
+                <p class="pcard__note">Get into the network. Feedback, freelance leads, creator chat.</p>
+                <ul class="pcard__list">
+                  <li>Discord community access</li>
+                  <li>Portfolio review threads</li>
+                  <li>Freelance &amp; job board</li>
+                  <li>AI workflow updates</li>
+                </ul>
+              </div>
+              <div class="pcard__stub">
+                <div class="pcard__stubtop"><span class="pcard__tag">Community Trim</span><span class="pcard__barcode"></span></div>
+                <div class="pcard__price"><span class="pcard__cur">$</span><span class="pcard__amt">20</span><span class="pcard__per">/ lifetime</span></div>
+                <button class="pcard__cta" type="button">Join Community <span>→</span></button>
+                <span class="pcard__vin">KS·COMM·2026</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- CENTER -->
+          <article class="pcard pcard--center" data-card="center">
+            <div class="pcard__inner glass">
+              <div class="pcard__top">
+                <span class="pcard__code">PASS / 02</span>
+                <h3 class="pcard__name">Masterclass</h3>
+                <p class="pcard__note">The one everyone picks. All 8+ classes, community, future drops.</p>
+                <ul class="pcard__list">
+                  <li>All 8+ Masterclasses</li>
+                  <li>Lifetime community access</li>
+                  <li>Every future masterclass</li>
+                  <li>AI tools &amp; workflows</li>
+                  <li>No subscription</li>
+                </ul>
+              </div>
+              <div class="pcard__stub pcard__stub--featured">
+                <div class="pcard__stubtop"><span class="pcard__tag">Most Enrolled</span><span class="pcard__barcode"></span></div>
+                <div class="pcard__price"><span class="pcard__cur">$</span><span class="pcard__amt">20</span><span class="pcard__per">/ one-time</span></div>
+                <button class="pcard__cta" type="button">Enroll Now <span>→</span></button>
+                <span class="pcard__vin">KS·MASTER·2026</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- RIGHT -->
+          <article class="pcard pcard--right" data-card="right">
+            <div class="pcard__inner glass">
+              <div class="pcard__top">
+                <span class="pcard__code">PASS / 03</span>
+                <h3 class="pcard__name">Live + All</h3>
+                <p class="pcard__note">Everything, plus weekly live mentoring with Qasim Zia.</p>
+                <ul class="pcard__list">
+                  <li>Everything in Masterclass</li>
+                  <li>4 live sessions / month</li>
+                  <li>Live portfolio reviews</li>
+                  <li>Direct founder Q&amp;A</li>
+                  <li>Cancel anytime</li>
+                </ul>
+              </div>
+              <div class="pcard__stub">
+                <div class="pcard__stubtop"><span class="pcard__tag">Live Trim</span><span class="pcard__barcode"></span></div>
+                <div class="pcard__price"><span class="pcard__cur">$</span><span class="pcard__amt">10</span><span class="pcard__per">/ month</span></div>
+                <button class="pcard__cta" type="button">Add Live <span>→</span></button>
+                <span class="pcard__vin">KS·LIVE·2026</span>
+              </div>
+            </div>
+          </article>
+        </div>
+        <p class="fineprint center">Lifetime access · All future content included · No hidden fees.</p>
+      </div>
+    </div>
+
+    <!-- SKILLS GRID reuse -->
+    <div class="section">
+      <div class="section__head" data-reveal>
+        <span class="eyebrow">Inside the pass</span>
+        <h2 class="h2 center">Skills You'll <em>Build</em></h2>
+      </div>
+      <div class="grid grid--3" id="masterGrid2"></div>
+    </div>
+  </section>
+
+  <!-- ==================== COMMUNITY ==================== -->
+  <section class="page" data-page="community" hidden>
+    <div class="pagehero">
+      <span class="eyebrow" data-reveal>03 — Private Creator Community</span>
+      <h1 class="pagehero__title" data-reveal>YOU JOIN A <em>CREATOR NETWORK.</em></h1>
+      <p class="muted narrow" data-reveal>
+        You're not just joining a masterclass. Become part of a community where creators
+        help creators — real connections, real feedback, real opportunities.
+      </p>
+    </div>
+
+    <div class="section community">
+      <div class="community__list" data-reveal>
+        <ul class="check check--lg">
+          <li>Direct access to fellow content creators</li>
+          <li>Network with video editors &amp; thumbnail designers</li>
+          <li>Portfolio reviews &amp; critique sessions</li>
+          <li>Collaboration opportunities</li>
+          <li>Freelance &amp; job opportunities</li>
+          <li>Creator discussions &amp; AI workflow updates</li>
+        </ul>
+        <a href="#masterclass" data-link="masterclass" class="btn btn--solid"><span class="btn__spark">✦</span> Get Community Access — $20</a>
+      </div>
+
+      <!-- DISCORD MOCK -->
+      <div class="glass discord" data-reveal>
+        <div class="discord__bar">
+          <span class="discord__logo">📡 KONTENT SQUAD</span>
+          <span class="discord__dot"></span>
+        </div>
+        <div class="discord__body">
+          <aside class="discord__channels">
+            <span>📢 announcements</span>
+            <span class="is-active">🤖 ai-thumbnail-tips</span>
+            <span>🎬 video-editing-help</span>
+            <span>🖼️ portfolio-reviews</span>
+            <span>💼 freelance-jobs</span>
+            <span>🤝 collabs</span>
+            <span>📈 youtube-growth</span>
+          </aside>
+          <div class="discord__chat">
+            <div class="msg"><span class="ava ava--qz">QZ</span><div><b>Qasim Zia <i>Founder</i></b><p>Welcome! Drop your thumbnail for a review 🎨</p></div></div>
+            <div class="msg"><span class="ava">C1</span><div><b>Creator</b><p>My CTR went from 2% to 9% after the AI thumbnail session 🔥</p></div></div>
+            <div class="msg"><span class="ava">C2</span><div><b>Creator</b><p>Got my first freelance client through this community 💯</p></div></div>
+            <p class="discord__typing"><i></i><i></i><i></i> 5 members are typing…</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== LIVE SESSIONS ==================== -->
+  <section class="page" data-page="live" hidden>
+    <div class="pagehero">
+      <span class="pill pill--hot" data-reveal><i class="ping"></i> Live Every Week</span>
+      <h1 class="pagehero__title" data-reveal>WEEKLY LIVE <em>MENTORING.</em></h1>
+      <p class="muted narrow" data-reveal>
+        Want personalized feedback? Join our weekly live sessions where we review your work,
+        answer your questions, and help you grow — live.
+      </p>
+    </div>
+
+    <div class="section">
+      <div class="section__head" data-reveal>
+        <span class="eyebrow">Every week we cover</span>
+        <h2 class="h2 center">What We'll <em>Cover</em></h2>
+      </div>
+      <div class="grid grid--3" id="liveGrid"></div>
+    </div>
+
+    <div class="section">
+      <div class="glass livecta" data-reveal>
+        <div class="livecta__left">
+          <span class="tiny">Monthly Membership</span>
+          <div class="price"><span>$</span>10<small>/month</small></div>
+          <h3 class="h3">4 Live Sessions Every Month</h3>
+          <p class="muted">
+            Get personalized feedback directly from Qasim Zia and the Kontent Squad team
+            every single week. Ask questions, share your work, and grow faster.
+          </p>
+        </div>
+        <div class="livecta__right">
+          <ul class="check">
+            <li>4 live sessions per month</li>
+            <li>Portfolio reviews every session</li>
+            <li>Direct Q&amp;A with the founder</li>
+            <li>YouTube growth tactics</li>
+            <li>Freelance &amp; job opportunities</li>
+            <li>Cancel anytime</li>
+          </ul>
+          <a href="#contact" data-link="contact" class="btn btn--solid btn--full"><span class="btn__spark">✦</span> Join Live Sessions — $10/mo</a>
+          <p class="fineprint">Cancel anytime · No lock-in commitment</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT ==================== -->
+  <section class="page" data-page="contact" hidden>
+    <div class="pagehero">
+      <span class="eyebrow" data-reveal>04 — Contact</span>
+      <h1 class="pagehero__title" data-reveal>LET'S <em>BUILD.</em></h1>
+      <p class="muted narrow" data-reveal>
+        Based in Faisalabad, Pakistan · Working Globally. Have a question before you enroll?
+        Reach out — we usually reply within a day.
+      </p>
+    </div>
+
+    <div class="section contact">
+      <form class="glass contact__form" data-reveal onsubmit="return false;">
+        <label>Name<input type="text" placeholder="Your name" required></label>
+        <label>Email<input type="email" placeholder="you@email.com" required></label>
+        <label>What do you need?
+          <select>
+            <option>Masterclass access — $20</option>
+            <option>Live sessions — $10/mo</option>
+            <option>Community only</option>
+            <option>Something else</option>
+          </select>
+        </label>
+        <label>Message<textarea rows="4" placeholder="Tell us what you're working on…"></textarea></label>
+        <button class="btn btn--solid btn--full" type="submit"><span class="btn__spark">✦</span> Send Message</button>
+      </form>
+
+      <div class="contact__aside" data-reveal>
+        <div class="glass contact__card">
+          <span class="tiny">Direct</span>
+          <a class="contact__line" href="tel:03027366693">📞 03027366693</a>
+          <a class="contact__line" href="mailto:KontentSquadx@gmail.com">✉️ KontentSquadx@gmail.com</a>
+          <span class="contact__line">📍 Faisalabad, Pakistan</span>
+          <a class="btn btn--ghost btn--full" href="#" >WhatsApp Us →</a>
+        </div>
+        <div class="glass contact__card">
+          <span class="tiny">Follow</span>
+          <div class="socials">
+            <a href="#">WA</a><a href="#">IG</a><a href="#">YT</a><a href="#">DC</a>
+          </div>
+          <p class="muted small">Learn Faster. Create Better. Powered by AI.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER (global) ============ -->
+<footer class="footer">
+  <div class="footer__grid">
+    <div class="footer__brand">
+      <a class="nav__logo" href="#home" data-link="home"><span class="nav__spark">✦</span>KONTENT<em>SQUAD</em></a>
+      <p class="muted small">
+        An AI-powered creator community where you master content creation, design, and
+        video editing skills used by professional creators to grow on YouTube and social media.
+      </p>
+      <div class="socials">
+        <a href="#">WA</a><a href="#">IG</a><a href="#">YT</a><a href="#">DC</a>
+      </div>
+    </div>
+    <div class="footer__col">
+      <h4>Masterclasses</h4>
+      <a href="#masterclass" data-link="masterclass">AI Thumbnail Design</a>
+      <a href="#masterclass" data-link="masterclass">Photoshop</a>
+      <a href="#masterclass" data-link="masterclass">Video Editing</a>
+      <a href="#masterclass" data-link="masterclass">After Effects</a>
+      <a href="#masterclass" data-link="masterclass">AI Tools</a>
+    </div>
+    <div class="footer__col">
+      <h4>Community</h4>
+      <a href="#community" data-link="community">Discord Community</a>
+      <a href="#live" data-link="live">Live Sessions</a>
+      <a href="#contact" data-link="contact">Contact Us</a>
+    </div>
+    <div class="footer__col">
+      <h4>Contact</h4>
+      <a href="tel:03027366693">03027366693</a>
+      <a href="mailto:KontentSquadx@gmail.com">KontentSquadx@gmail.com</a>
+      <span>Faisalabad, Pakistan</span>
+      <a href="#">WhatsApp Us →</a>
+    </div>
+  </div>
+  <div class="footer__base">
+    <span>© 2025 Kontent Squad. All rights reserved.</span>
+    <span>Learn Faster. Create Better. Powered by AI.</span>
+  </div>
+</footer>
+
+<!-- ============ ORBIT MODAL ============ -->
+<div class="orbit-modal" id="orbitModal">
+  <div class="orbit-modal__frame">
+    <button class="orbit-modal__close" id="orbitClose"><span class="x">×</span> CLOSE</button>
+    <img id="orbitModalImg" src="" alt="Expanded">
+    <div class="orbit-modal__meta"><span id="orbitModalLabel">FRAME 00</span><span>ESC TO DISMISS</span></div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
